@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JEE PSYCHOO | Belajar Anak SD Kelas 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1><i class="fas fa-graduation-cap"></i> Belajar Asyik SD Kelas 1</h1>
+        <p>Pilih game favoritmu dan belajar sambil bermain!</p>
+    </div>
+
+    <div class="menu-grid">
+        <button class="menu-btn active" data-category="hewan">
+            <i class="fas fa-paw"></i>
+            <span>Tebak Hewan</span>
+        </button>
+        <button class="menu-btn" data-category="buah">
+            <i class="fas fa-apple-alt"></i>
+            <span>Tebak Buah</span>
+        </button>
+        <button class="menu-btn" data-category="sayur">
+            <i class="fas fa-carrot"></i>
+            <span>Tebak Sayur</span>
+        </button>
+        <button class="menu-btn" data-category="penjumlahan">
+            <i class="fas fa-plus-circle"></i>
+            <span>Penjumlahan</span>
+        </button>
+        <button class="menu-btn" data-category="pengurangan">
+            <i class="fas fa-minus-circle"></i>
+            <span>Pengurangan</span>
+        </button>
+    </div>
+
+    <div class="game-area">
+        <div class="game-header">
+            <div class="game-title" id="gameTitle">Tebak Hewan</div>
+            <div class="score-box">
+                <i class="fas fa-star"></i>
+                <span id="scoreDisplay">0</span>
+                <span>/5</span>
+            </div>
+        </div>
+        
+        <div class="question-box">
+            <div class="question-image" id="questionImage"></div>
+            <div class="question-text" id="questionText">Loading...</div>
+        </div>
+        
+        <div class="options-grid" id="optionsArea"></div>
+        
+        <div id="feedback" class="feedback"></div>
+        
+        <div id="nextArea" style="display: none;">
+            <button id="nextBtn" class="next-btn"><i class="fas fa-arrow-right"></i> Soal Selanjutnya</button>
+        </div>
+    </div>
+</div>
+
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <i class="fas fa-trophy"></i>
+        <h2>Selamat!</h2>
+        <div class="final-score">
+            <span id="finalScore">0</span>/5
+        </div>
+        <div id="resultMessage"></div>
+        <button id="restartBtn" class="restart-btn"><i class="fas fa-redo-alt"></i> Main Lagi</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
